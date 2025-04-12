@@ -1,0 +1,135 @@
+/* Body styling with gradient background */
+body {
+    font-size: 1rem;
+    margin: 0;
+    background: url('pictures/5.png') no-repeat center center fixed; 
+    background-size: cover;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.text-content {
+    text-align: right;
+    color: white;
+    padding-left: 70px;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: auto;
+    padding: 50px;
+    position: relative;
+}
+
+.profile-pic {
+    position: relative;
+    top: 130px;
+    right: 20px;
+    left: 40px;
+    border-radius: 50%;
+    height: 450px;
+    object-fit: cover;
+    animation: neonGlow 1.5s infinite alternate;
+    box-shadow: 0 0 0 1px #00bfff;
+}
+
+@keyframes neonGlow {
+    0% {
+        box-shadow: 0 0 5px #00bfff, 0 0 15px #00bfff, 0 0 30px #00bfff, 0 0 50px #00bfff;
+    }
+    100% {
+        box-shadow: 0 0 20px #00bfff, 0 0 40px #00bfff, 0 0 80px #00bfff, 0 0 100px #00bfff;
+    }
+}
+
+.portfolio-title {
+    position: fixed;
+    top: 10px;
+    left: 50px;
+    margin: 0;
+    z-index: 1000;
+}
+
+.portfolio-title img {
+    height: 50px;
+    width: auto;
+}
+
+.intro {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top: 130px;
+    left: 50px;
+    margin: 0;
+    z-index: 1000;
+}
+
+.intro1 {
+    font-size: 18px;
+    font-weight: normal;
+    color: white;
+    position: absolute;
+    top: 250px;
+    left: 70px;
+    margin: 0;
+    z-index: 1000;
+    width: 47%;
+    background-color: rgba(0, 0, 0, 0.33);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.74);
+    white-space: pre-line;
+    height: auto;
+}
+
+.intro1 p {
+    text-align: justify;
+    margin: 0;
+    white-space: pre-wrap;
+    width: 100%;
+    line-height: 1.6;
+}
+
+.fb, .telegram, .instagram, .linkedin, .gmail {
+    position: absolute;
+    top: 660px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.fb { left: 250px; }
+.telegram { left: 337.5px; }
+.instagram { left: 425px; }
+.linkedin { left: 512.5px; }
+.gmail { left: 600px; }
+
+.fb:hover, .telegram:hover, .instagram:hover, .linkedin:hover, .gmail:hover {
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.61);
+    height: 70px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0 25px;
+    font-size: 18px;
+}
+
+.footer-links a:hover {
+    color: #00bfff;
+}
