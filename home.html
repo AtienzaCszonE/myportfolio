@@ -1,45 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <title>My Portfolio</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="container">
-            <img src="pictures/myphoto.png" alt="My Profile Photo" class="profile-pic">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <script>
+    document.addEventListener('mousemove', function(e) {
+      const sparkle = document.createElement("div");
+  
+      const size = Math.random() * 6 + 4; // 4px - 10px
+      const colors = ['#ffffff', '#ffe4e1', '#ffccff', '#ccffff', '#fffacd', '#e0ffff', '#ffb6c1'];
+      const color = colors[Math.floor(Math.random() * colors.length)];
+  
+      sparkle.style.position = "fixed";
+      sparkle.style.left = e.pageX + "px";
+      sparkle.style.top = e.pageY + "px";
+      sparkle.style.width = size + "px";
+      sparkle.style.height = size + "px";
+      sparkle.style.background = color;
+      sparkle.style.borderRadius = "50%";
+      sparkle.style.pointerEvents = "none";
+      sparkle.style.zIndex = 9999;
+      sparkle.style.opacity = 1;
+      sparkle.style.boxShadow = `0 0 10px ${color}, 0 0 20px ${color}`;
+      sparkle.style.transition = "all 0.6s ease-out";
+  
+      document.body.appendChild(sparkle);
+  
+      requestAnimationFrame(() => {
+        sparkle.style.transform = `translate(${Math.random() * 20 - 10}px, ${Math.random() * -20}px) scale(0.5)`;
+        sparkle.style.opacity = 0;
+      });
+  
+      setTimeout(() => sparkle.remove(), 600);
+    });
+  </script>
+  <footer>
+    <div class="footer-links">
+      <a href="home.html" class="btn-design">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="projectinfo.html">PROJECT</a>
+      <a href="resume.html" target="_blank" rel="noopener noreferrer">RESUME</a> <!-- Updated link -->
+      <a href="feedback.html">FEEDBACK</a>
+      <div class="portfolio-logo">
+        <img src="pictures/logo.png" alt="Portfolio Logo" />
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Add these spans inside the box -->
 
-            <!-- Social Links -->
-            <a href="https://www.facebook.com/atienzacharrise04/" target="_blank"><img src="pictures/fb.png" alt="fb" class="fb"></a>
-            <a href="telegram.html"><img src="pictures/telegram.png" alt="telegram" class="telegram"></a>
-            <a href="https://www.instagram.com/cha_atienza/" target="_blank"><img src="pictures/instagram.png" alt="instagram" class="instagram"></a>
-            <a href="https://www.linkedin.com/in/chaatienza0121/" target="_blank"><img src="pictures/linkedin.png" alt="linkedin" class="linkedin"></a>
-            <a href="gmail.html"><img src="pictures/gmail.png" alt="gmail" class="gmail"></a>
 
-            <div class="text-content">
-                <div class="portfolio-title">
-                    <img src="pictures/logo.png" alt="Portfolio Logo">
-                </div>
-                <h2 class="intro">Hi, I'm Charrise Atienza!</h2>
-                <h3 class="intro1">
-                    <p>
-                        I am a Computer Science graduate with a profound passion for IT support, problem-solving, and modern web development. Throughout my academic journey, I have refined my skills in both theoretical and practical aspects of technology and am eager to apply these competencies in real-world settings. I thrive on the challenge of diagnosing issues and optimizing systems to enhance user experiences and operational efficiency. With a solid foundation in programming languages and web technologies, I am excited to develop innovative solutions that streamline processes and foster collaboration within dynamic teams. My objective is to continuously learn, grow, and contribute to projects that drive meaningful advancements in the technology industry.
-                    </p>
-                </h3>
-            </div>
-        </div>
-        
-        <footer>
-            <div class="footer-links">
-                <a href="home.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="skills.html">Skills</a>
-                <a href="projectinfo.html">Project</a>
-                <a href="contact.html">Contact</a>
-                <a href="resume.html">Resume</a>
-                <a href="feedback.html">Feedback</a>
-            </div>
-        </footer>
-    </body>
+  <div class="home-cont">
+    <!-- Social Media Links -->
+    <a href="https://www.facebook.com/atienzacharrise04/" target="_blank">
+      <img src="pictures/fb.png" alt="Facebook" class="fb" />
+    </a>
+    <a href="https://github.com/AtienzaCszonE" target="_blank">
+      <img src="pictures/github.png" alt="Github" class="github" />
+    </a>
+    <a href="https://www.instagram.com/cha_atienza/" target="_blank">
+      <img src="pictures/instagram.png" alt="Instagram" class="instagram" />
+    </a>
+    <a href="https://www.linkedin.com/in/chaatienza0121/" target="_blank">
+      <img src="pictures/linkedin.png" alt="LinkedIn" class="linkedin" />
+    </a>
+      <a href="mailto:atienza.charrise.files@gmail.com"  target="_blank">
+      <img src="pictures/gmail.png" alt="Gmail" class="gmail" />
+    </a>
+    <div class="quote">
+      <h3 class="quote-animated">&emsp;&emsp;&emsp;&emsp; | <span class="quote-text"></span></h3>
+    </div>
+  
+    <script>
+      const quotes = [
+        "Let desire fuel your ambition and conquer the impossible.",
+        "A positive mindset changes everything.",
+        "Start where you are. Use what you have. Build well.",
+        "Don’t rush it. Mastery takes intentional effort.",
+        "Stay true, flex your grind, and make the impossible happen.",
+        "Keep going. Someone is inspired by your grind.",
+        "Your potential is limitless when you believe in yourself.",
+        "What you build today echoes in your future.",
+        "Master your mindset, and you’ll master your destiny.",
+        "Creativity thrives where fear is quiet.",
+        "Even small progress changes everything.",
+        "Manifest your dreams, prove that nothing is impossible.",
+        "Your quiet work will speak the loudest someday.",
+        "Even your slow progress is still progress.",
+        "You’re not behind. You’re just not finished yet.",
+        "Don’t wait to feel ready — start messy.",
+        "Being unseen isn’t being unworthy.",
+        "Keep building — your future self is watching.",
+        "Your journey is yours to define; make it your own way.",
+        "Progress began the moment I showed up afraid.",
+        "Every success story was once someone’s impossible.",
+      ];
+    
+      let i = 0;
+      const quoteSpan = document.querySelector(".quote-text");
+    
+      function changeQuote() {
+        quoteSpan.style.opacity = 0;
+    
+        setTimeout(() => {
+          quoteSpan.innerText = `"${quotes[i]}"`;
+          quoteSpan.style.opacity = 1;
+          i = (i + 1) % quotes.length;
+        }, 300); // fade-out time before switching
+      }
+    
+      changeQuote();
+      setInterval(changeQuote, 4000);
+    </script>
+    
+  <div class="home-wrapper">
+    <div class="profile-section">
+      <div class="name-role">
+        <h1>Hi, I'm</h1>
+        <h2><span>CHARRISE</span> ATIENZA</h2>
+        <p>Web Developer | UI/UX Designer</p>
+      </div>
+      <div class="image-container">
+        <img src="pictures/myphoto.png" alt="Profile" />
+      </div>
+      <div class="home-text">
+        <p>&emsp;&emsp;&emsp;I am a Computer Science graduate with a deep passion for IT support, problem-solving, and modern web development. My academic journey has not only provided me with a solid foundation in technology but also fueled my enthusiasm for creating innovative digital solutions. I am eager to bring both my technical skills and creative mindset to real-world challenges and contribute meaningfully to the ever-evolving tech landscape.
+        </p>      
+    </div>  
+    </div>
+    </div>
+  </div>
+</body>
 </html>
